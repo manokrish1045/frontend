@@ -12,26 +12,26 @@ import ScrollableChat from "./ScrollableChat";
 
 // import io from "socket.io-client";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "http://localhost:4000"; //
+// const ENDPOINT = "http://localhost:4000"; //
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
     const [newMessage, setNewMessage] = useState("");
-    const [socketConnected, setSocketConnected] = useState(false);
+    const [socketConnected] = useState(false);
     const [typing, setTyping] = useState(false);
-    const [istyping, setIsTyping] = useState(false);
+    const [istyping] = useState(false);
     const toast = useToast();
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
+    // const defaultOptions = {
+    //     loop: true,
+    //     autoplay: true,
 
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice",
-        },
-    };
+    //     rendererSettings: {
+    //         preserveAspectRatio: "xMidYMid slice",
+    //     },
+    // };
     const { selectedChat, setSelectedChat, user, notification, setNotification } =
         ChatState();
 
