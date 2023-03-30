@@ -1,0 +1,18 @@
+.talkbox {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    background: white;
+    margin: 40px 0 15px 0;
+    border-width: 1px;
+
+
+}
+
+.login {
+    background: white;
+    width: 100%;
+    padding: 4px;
+    border-width: 1px;
+
+}
